@@ -41,8 +41,4 @@ public class ModBlocks {
     private static <B extends Block> void registerBlockItem(String name, DeferredBlock<B> block) {
         ModItems.ITEMS.registerSimpleBlockItem(name, block);
     }
-
-    public static void register(IEventBus eventBus) {
-        BLOCKS.register(eventBus);
-    }
 }
