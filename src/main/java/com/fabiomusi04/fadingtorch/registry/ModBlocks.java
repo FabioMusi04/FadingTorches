@@ -5,11 +5,8 @@ import com.fabiomusi04.fadingtorch.FadingTorch;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.TorchBlock;
 import net.minecraft.world.level.block.state.BlockBehaviour;
-import net.minecraft.world.level.material.PushReaction;
-import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
@@ -25,11 +22,7 @@ public class ModBlocks {
                     props
             ),
             BlockBehaviour.Properties.ofFullCopy(Blocks.TORCH)
-                    .noCollission()
-                    .instabreak()
-                    .lightLevel(state -> 14)
-                    .sound(SoundType.WOOD)
-                    .pushReaction(PushReaction.DESTROY)
+                    .lightLevel(state -> 15)
     );
 
     private static <B extends Block> DeferredBlock<B> registerBlock(String name, Function<BlockBehaviour.Properties, ? extends B> blockFactory, BlockBehaviour.Properties blockProperties) {
