@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "fadingtorch:block/fading_coal_ore"
+  }
+}

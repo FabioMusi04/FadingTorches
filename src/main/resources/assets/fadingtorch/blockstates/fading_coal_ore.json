@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "fadingtorch:block/fading_coal_ore"
+    }
+  }
+}

@@ -25,6 +25,12 @@ public class ModBlocks {
                     .lightLevel(state -> 15)
     );
 
+    public static final DeferredBlock<Block> FADING_COAL_ORE = registerBlock(
+            "fading_coal_ore",
+            Block::new,
+            BlockBehaviour.Properties.ofFullCopy(Blocks.COAL_BLOCK)
+    );
+
     private static <B extends Block> DeferredBlock<B> registerBlock(String name, Function<BlockBehaviour.Properties, ? extends B> blockFactory, BlockBehaviour.Properties blockProperties) {
         DeferredBlock<B> block = BLOCKS.registerBlock(name, blockFactory, blockProperties);
         registerBlockItem(name, block);
